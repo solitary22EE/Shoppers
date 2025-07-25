@@ -12,19 +12,6 @@ Shoppers is a modern full-stack e-commerce web application built using the **MER
 - 📁 RESTful API backend with secure routes
 - 📊 Responsive UI with Bootstrap
 
-## 🛠️ Tech Stack
-
-**Frontend:**
-- React.js (with Hooks)
-- React Router
-- Axios
-- Bootstrap / TailwindCSS
-
-**Backend:**
-- Node.js
-- Express.js
-- MongoDB (with Mongoose)
-- JWT for authentication
-- bcrypt for password hashing
 
 
+# Its not completed i am working on it
