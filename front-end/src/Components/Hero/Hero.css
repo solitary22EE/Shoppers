@@ -34,7 +34,8 @@
     color: white;
     background-color: rgb(28, 142, 196);
    
-    border: none;
+    border:  none;
+    border-radius: 5px;
 }
 .shop-button {
     border-radius: 3%;
@@ -47,7 +48,7 @@
     background-color: rgb(64, 137, 247);
     color: white;
     transform: translate3d(0px,6px,-1px);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 30px;
+    box-shadow: 0 5px 20px -7px rgba(0, 0, 0, 0.9) !important
 }
 /* ----------------------------gird options ------------------------------ */
 
@@ -96,40 +97,41 @@
 .image-grid img {
     max-height: 500px;
     padding: 30px;
+    border-radius: 38px;
     
 
 }
 
 .image-container {
-  position: relative;
-  overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .img-info {
-  position: absolute;
-  bottom: 50px;
-  left: 40px;
-  color: black;
-  padding: 10px 15px;
+    position: absolute;
+    bottom: 50px;
+    left: 40px;
+    color: black;
+    padding: 10px 15px;
   
 }
 
 .img-info p {
-  margin: 0;
-  font-size: 14px;
-  letter-spacing: 1px;
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
 .img-info h3 {
-  margin: 0;
-  font-size: 20px;
-  font-weight: bold;
-}
-.img-fluid {
-    transition: 0.3s;
-}
-.img-fluid:hover {
-    transform: scale(1.1)
-    
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
 }
 
+.image-container {
+    transition:.3s all ease;
+}
+.image-container:hover {
+    transform: scale(1.1);
+    
+}

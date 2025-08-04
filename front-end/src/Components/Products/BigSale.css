@@ -1,0 +1,102 @@
+/* Centered heading with line on top */
+.big-heading {
+  position: relative;
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-top: 2px; /* Extra space to show the line above */
+  margin-bottom: 10px;
+}
+
+/* Decorative line ABOVE the heading */
+.big-heading::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  margin-bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: #4b4bff;
+  border-radius: 2px;
+}
+.big-text {
+  display: block;
+  text-align: center;
+}
+/* Banner container */
+.big-banner {
+  margin-bottom: 35px;
+}
+
+/* Blog image */
+.big-banner img {
+  border-radius: 4px;
+}
+
+/* Text content */
+.big-text a {
+  text-decoration: none;
+  color: #7971ea;
+}
+
+.big-text a:hover {
+  color: #3a2ee0;
+}
+
+.postmeta {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.dot-span {
+  font-weight: bold;
+  color: #999;
+}
+
+/* Shop now button */
+.shop_now-btn {
+  color: white;
+  background-color: rgb(28, 142, 196);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  transition: 0.3s ease;
+}
+
+.shop_now-btn:hover {
+  background-color: rgb(64, 137, 247);
+  transform: translateY(3px);
+  box-shadow: 0 5px 20px -7px rgba(0, 0, 0, 0.9);
+}
+
+/* Bottom horizontal line before footer */
+.footer-underline {
+  border: none;
+  height: 1px;
+  background-color: #333;
+  width: 100%;
+  margin-top: 40px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .big-text {
+    text-align: center;
+  }
+
+  .shop_now-btn {
+    margin-top: 15px;
+  }
+
+  .big-heading {
+    font-size: 2rem;
+  }
+
+  .big-heading::after {
+    width: 40px;
+    height: 3px;
+  }
+}
