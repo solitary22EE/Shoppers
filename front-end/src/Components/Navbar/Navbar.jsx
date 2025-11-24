@@ -1,30 +1,34 @@
-import { Container, Row, Col } from 'react-bootstrap';
-import './Navbar.css'
+// src/components/navbar/Navbar.jsx
+import React from 'react';
+import { Navbar as BSNavbar, Nav, Container } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+import './Navbar.css'; // optional, if you want custom styles
 
 const Navbar = () => {
   return (
-     <div className='main-navbar'>
-      <Container  className='py-3'>
-        <Row className='align-items-center justify-content-between fs-5'>
-          <Col xs={4} className='d-flex align-items-center gap-2'>
-               <i class="bi bi-search"></i>
-               <input type="text" className='form-control border-0' placeholder='Search'/>
-          </Col>
+    <BSNavbar bg="white" expand="lg" className="py-3 px-5">
+      <Container>
+        {/* Brand / Logo */}
+        <BSNavbar.Brand href="/">Shoppee</BSNavbar.Brand>
 
-          <Col xs={4} className='text-center'>
-              <h2 className='logo-text'><a href="#" className='logo-link'>SHOPPERS</a></h2>
-          </Col>
-
-          <Col xs={4} className='d-flex justify-content-end align-items-center gap-4 '>
-              <i className="bi bi-person-fill icon-btn"></i>
-              <i className="bi bi-heart icon-btn"></i>
-              <i className="bi bi-cart icon-btn"></i>
-          </Col>
-         
-        </Row>
+        <BSNavbar.Toggle aria-controls="main-navbar" />
+        <BSNavbar.Collapse id="main-navbar">
+          <Nav className="mx-auto fw-medium gap-4 option-list">
+            <NavLink className="nav-link" to="/">
+              HOME
+            </NavLink>
+            <NavLink className="nav-link" to="/about">
+              ABOUT
+            </NavLink>
+            <Nav.Link href="#">SHOP</Nav.Link>
+            <Nav.Link href="#">CATALOGUE</Nav.Link>
+            <Nav.Link href="#">NEW ARRIVAL</Nav.Link>
+            <Nav.Link href="#">CONTACT</Nav.Link>
+          </Nav>
+        </BSNavbar.Collapse>
       </Container>
-     </div>
-  )
-}
+    </BSNavbar>
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -1,19 +1,25 @@
-import React from 'react'
-import Navbar from '../components/navbar/Navbar'
-import Hero from '../Components/Hero/Hero'
-import Featured from '../Components/Products/Featured'
-import BigSale from '../Components/Products/BigSale'
-import Footer from '../Components/Footer/Footer'
+// src/Router/RouterFile.jsx
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+import Navbar from '../components/navbar/Navbar';
+import Home from '../Pages/Home/Home';        // ✅ new
+import About from '../Pages/About/About';    // ✅ already have this
+
 const RouterFile = () => {
   return (
-    <div>
+    <>
+      {/* Always visible */}
       <Navbar />
-      <Hero/>
-      <Featured/>
-      <BigSale />
-      <Footer/>
-    </div>
-  )
-}
 
-export default RouterFile
+      {/* Page routing */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        {/* Later: <Route path="/shop" element={<Shop />} /> etc. */}
+      </Routes>
+    </>
+  );
+};
+
+export default RouterFile;

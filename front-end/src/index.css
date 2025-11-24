@@ -1,0 +1,16 @@
+/* Hide vertical scrollbar but keep scroll working */
+
+/* Chrome, Edge, Safari */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+body {
+  scrollbar-width: none;        /* hide scrollbar */
+}
+
+/* IE / old Edge */
+body {
+  -ms-overflow-style: none;     /* hide scrollbar */
+}
